@@ -3,8 +3,9 @@
 
 #include <stdlib.h> 
 #include <utility>
+#include <iostream>
+#include <sstream>
 #include <string>
-#include <iostring>
 #include <vector>
 #include "Species.h"
 #include "Darwin.h"

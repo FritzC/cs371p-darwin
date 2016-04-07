@@ -3,6 +3,8 @@
 #define Darwin_h
 
 #include <stdlib.h>
+#include <utility>
+#include "Creature.h"
 
 class Darwin {
 	public:

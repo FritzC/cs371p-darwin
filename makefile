@@ -2,6 +2,10 @@ FILES :=                            \
     darwin-tests/EID-RunDarwin.out  \
     darwin-tests/EID-TestDarwin.c++ \
     darwin-tests/EID-TestDarwin.out \
+    Creature.c++                    \
+    Creature.h                      \
+    Species.c++                     \
+    Species.h                       \
     Darwin.c++                      \
     Darwin.h                        \
     Darwin.log                      \

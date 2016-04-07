@@ -2,7 +2,9 @@
 #define Creature_h
 
 #include <stdlib.h> 
+#include <utility>
 #include "Species.h"
+#include "Darwin.h"
 
 class Creature {
 	public:

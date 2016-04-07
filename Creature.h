@@ -1,5 +1,5 @@
-#ifndef Creature_h
-#define Creature_h
+#ifndef CREATURE_H
+#define CREATURE_H
 
 #include <stdlib.h> 
 #include <utility>
@@ -18,5 +18,6 @@ class Creature {
 		int face;
 		int currentStep;
 		std::pair<int, int> location;
-}
+};
+
 #endif

@@ -1,6 +1,5 @@
-
-#ifndef Species_h
-#define Species_h
+#ifndef SPECIES_H
+#define SPECIES_H
 
 #include <stdlib.h>
 
@@ -13,5 +12,5 @@ class Species {
 	private:
 		char identifier;
 		std::vector<std::string> instructionSet;
-}
+};
 #endif

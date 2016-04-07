@@ -1,6 +1,5 @@
-
-#ifndef Darwin_h
-#define Darwin_h
+#ifndef DARWIN_H
+#define DARWIN_H
 
 #include <stdlib.h>
 #include <utility>
@@ -24,5 +23,6 @@ class Darwin {
 		int height;
 		int turn;
 		Creature*** grid;
-}
+};
+
 #endif

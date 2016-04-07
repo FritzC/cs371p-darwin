@@ -9,8 +9,6 @@
 #include <vector>
 #include "Species.h"
 
-class Darwin;
-
 class Creature {
 	public:
 		Creature(Species);
@@ -18,10 +16,12 @@ class Creature {
 		void infectWith(Species);
 		void printIdentifier();
 		void addToDarwin(std::pair<int, int>);
+		std::pair<int, int> getLocationFaced();
 	private:
 		bool hadTurn;
 		int face;
 		int currentStep;
+		Species species;
 		std::pair<int, int> location;
 };
 

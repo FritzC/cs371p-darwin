@@ -38,7 +38,7 @@ int Darwin::getLocationType(pair<int, int> coordinates) {
 	if (coordinates.first >= 0 && coordinates.first < width
 			&& coordinates.second >= 0 && coordinates.second < height) {
 		return INVALID;
-	} else if (grid[coordinate.first][coordinate.second] == nullptr) {
+	} else if (grid[coordinates.first][coordinates.second] == nullptr) {
 		return EMPTY;
 	}
 	return OCCUPIED;
@@ -51,11 +51,11 @@ Creature* Darwin::getCreatureAt(pair<int, int> coordinates) {
 	return grid[coordinates.first][coordinates.second];
 }
 
-void Darwin::insertCreature(Creature* creature, pair<int, int> coordinates) {
+void Darwin::insertCreature(Creature& creature, pair<int, int> coordinates) {
 	if (getLocationType(coordinates) != EMPTY) {
 		throw invalid_argument("Invalid coordinates specified");
 	}
-	grid[coodinates.first][coordinates.second] = creature;
+	grid[coodinates.first][coordinates.second] = &creature;
 }
 
 void Darwin::print() {
@@ -72,7 +72,7 @@ void Darwin::print() {
 				cout << ".";
 				continue;
 			}
-			grid[x][y]->writeIdentifier();
+			grid[x][y]->printIdentifier();
 		}
 		cout << endl;
 	}

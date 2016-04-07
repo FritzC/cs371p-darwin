@@ -5,6 +5,7 @@
 #include <utility>
 #include <string>
 #include <vector>
+#include <stdexcept>
 #include "Creature.h"
 
 class Darwin {
@@ -12,7 +13,7 @@ class Darwin {
 		Darwin(int, int);
 		void print();
 		void step();
-		void insertCreature(std::pair<int, int>);
+		void insertCreature(Creature&, std::pair<int, int>);
 		Creature* getCreatureAt(std::pair<int, int>);
 		enum LocationType {
 			INVALID,

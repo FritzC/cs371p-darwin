@@ -14,14 +14,14 @@ void Creature::step(Darwin* grid) {
 		string instruction = species.getInstruction(currentStep);
 		if (instruction.compare("") == 0) {
 			currentStep = 0;
-			instruction = species.getInstruction(currentStep;);
+			instruction = species.getInstruction(currentStep);
 		}
     	istringstream stream(instruction);
     	string instructionType;
     	int auxInfo;
     	stream >> instructionType;
-    	if (iss) {
-    		iss >> auxInfo;
+    	if (stream) {
+    		stream >> auxInfo;
     	}
 		if (instructionType.compare("hop") == 0) {
 			if(grid->getLocationType(getLocationFaced()) == Darwin::EMPTY) {

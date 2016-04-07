@@ -9,10 +9,10 @@ string Species::getInstruction(int step) {
 	return "";
 }
 
-void addInstruction(string instruction) {
+void Species::addInstruction(string instruction) {
 	instructionSet.push_back(instruction);
 }
 
-void printIdentifier() {
+void Species::printIdentifier() {
 	cout << identifier;
 }

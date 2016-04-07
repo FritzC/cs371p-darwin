@@ -2,10 +2,6 @@
 
 using namespace std;
 
-Creature::Creature(Species spec) {
-	species = spec;
-}
-
 void Creature::step(Darwin* grid) {
 	if (hadTurn) {
 		return;

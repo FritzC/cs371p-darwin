@@ -11,7 +11,7 @@
 
 class Creature {
 	public:
-		Creature(Species);
+		Creature(Species type) : species(type);
 		void step(Darwin*);
 		void infectWith(Species);
 		void printIdentifier();

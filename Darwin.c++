@@ -12,7 +12,7 @@ Darwin::Darwin(int gridWidth, int gridHeight) {
 	width = gridWidth;
 	height = gridHeight;
 	grid = new Creature**[width];
-	for (int i = 0; i < width i++) {
+	for (int i = 0; i < width; i++) {
 		grid[i] = new Creature*[height];
 		fill(grid[i], grid[i] + height, nullptr);
 	}
@@ -34,7 +34,7 @@ void Darwin::step() {
  * @param coordinates - Location being checked
  * @return - LocationType of the location
  */
-LocationType Darwin::getLocationType(pair<int, int> coordinates) {
+int Darwin::getLocationType(pair<int, int> coordinates) {
 	if (coordinates.first >= 0 && coordinates.first < width
 			&& coordinates.second >= 0 && coordinates.second < height) {
 		return INVALID;

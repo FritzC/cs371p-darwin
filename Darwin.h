@@ -19,7 +19,7 @@ class Darwin {
 			EMPTY,
 			OCCUPIED
 		};
-		LocationType getLocationType(std::pair<int, int>);
+		int getLocationType(std::pair<int, int>);
 	private:
 		int width;
 		int height;

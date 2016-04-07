@@ -17,7 +17,7 @@ class Creature {
 		void step(Darwin*);
 		void infectWith(Species);
 		void printIdentifier();
-		void addToDarwin(std::pair<int, int>)
+		void addToDarwin(std::pair<int, int>);
 	private:
 		bool hadTurn;
 		int face;

@@ -7,10 +7,19 @@
 class Darwin {
 	public:
 		Darwin(int, int);
-		bool isValidLoc(std::pair<int, int>);
+		void print();
+		void step();
+		void insertCreature(std::pair<int, int>);
 		Creature* getCreatureAt(std::pair<int, int>);
+		enum LocationType {
+			INVALID,
+			EMPTY,
+			OCCUPIED
+		};
+		LocationType getLocationType(std::pair<int, int>);
 	private:
 		int width;
 		int height;
-		Creature** grid;
+		int turn;
+		Creature*** grid;
 }

@@ -2,10 +2,11 @@
 
 using namespace std;
 
-void Creature::step(Darwin* grid) {
+int Creature::getAction(int facedLocationType) {
 	if (hadTurn) {
-		return;
+		return NONE;
 	}
+	int action = NONE;
 	while (true) {
 		string instruction = species.getInstruction(currentStep);
 		if (instruction.compare("") == 0) {
@@ -20,10 +21,8 @@ void Creature::step(Darwin* grid) {
     		stream >> auxInfo;
     	}
 		if (instructionType.compare("hop") == 0) {
-			if(grid->getLocationType(getLocationFaced()) == Darwin::EMPTY) {
-				grid->insertCreature(this&, getLocationFaced());
-				grid->insertCreature(nullptr, location);
-				location = getLocationFaced();
+			if(facedLocationType == Darwin::EMPTY) {
+				action = MOVE;
 			}
 			break;
 		} else if (instructionType.compare("left") == 0) {
@@ -35,17 +34,17 @@ void Creature::step(Darwin* grid) {
 			face %= 4;
 			break;
 		} else if (instructionType.compare("infect") == 0) {
-			if (grid->getLocatioonType(getLocationFaced()) == OCCUPIED) {
-				grid->getCreatureAt(getLocationFaced()).infectWith(species);
+			if (facedLocationType == OCCUPIED) {
+				action = INFECT;
 			}
 			break;
 		} else if (instructionType.compare("if_empty") == 0) {
-			if(grid->getLocationType(getLocationFaced()) == Darwin::EMPTY) {
+			if(facedLocationType == Darwin::EMPTY) {
 				currentStep = auxInfo;
 				continue;
 			}
 		} else if (instructionType.compare("if_wall") == 0) {
-			if(grid->getLocationType(getLocationFaced()) == Darwin::INVALID) {
+			if(facedLocationType == Darwin::INVALID) {
 				currentStep = auxInfo;
 				continue;
 			}
@@ -55,7 +54,7 @@ void Creature::step(Darwin* grid) {
 				continue;
 			}
 		} else if (instructionType.compare("if_enemy") == 0) {
-			if(grid->getLocationType(getLocationFaced()) == Darwin::OCCUPIED) {
+			if(facedLocationType == Darwin::OCCUPIED) {
 				currentStep = auxInfo;
 				continue;
 			}
@@ -66,22 +65,19 @@ void Creature::step(Darwin* grid) {
 		currentStep++;
 	}
 	hadTurn = true;
+	return action;
 }
 
-void Creature::addToDarwin(pair<int, int> coordinates) {
-	location = coodinates;
-}
-
-void Creature::infectWith(Species newSpecies) {
-	species = newSpecies;
-	currentStep = 0;
+void Creature::infect(Creature* infectee) {
+	infectee->species = species;
+	infectee->currentStep = 0;
 }
 
 void Creature::printIdentifier() {
 	species.printIdentifier();
 }
 
-pair<int, int> getLocationFaced() {
+pair<int, int> getLocationFaced(pair<int, int> location) {
 	return pair<int, int>((face % 2 == 0) ? location.first + face - 1 : location.first,
 							(face % 2 == 1) ? location.second + face - 2 : location.second);
 }

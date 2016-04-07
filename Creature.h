@@ -12,17 +12,21 @@
 class Creature {
 	public:
 		Creature(Species type) : species(type) {};
-		void step(Darwin*);
-		void infectWith(Species);
+		void getAction(int);
+		void infect(Creature*);
 		void printIdentifier();
 		void addToDarwin(std::pair<int, int>);
 		std::pair<int, int> getLocationFaced();
+		enum Action {
+			NONE,
+			MOVE,
+			INFECT
+		};
 	private:
 		bool hadTurn;
 		int face;
 		unsigned currentStep;
 		Species species;
-		std::pair<int, int> location;
 };
 
 #endif

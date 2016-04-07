@@ -8,7 +8,7 @@
 class Species {
 	public:
 		Species(char id) : identifier(id) {};
-		std::string getInstruction(int);
+		std::string getInstruction(unsigned);
 		void addInstruction(std::string);
 		void printIdentifier();
 	private:

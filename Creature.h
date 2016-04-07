@@ -11,7 +11,7 @@
 
 class Creature {
 	public:
-		Creature(Species type) : species(type);
+		Creature(Species type) : species(type) {};
 		void step(Darwin*);
 		void infectWith(Species);
 		void printIdentifier();
@@ -20,7 +20,7 @@ class Creature {
 	private:
 		bool hadTurn;
 		int face;
-		int currentStep;
+		unsigned currentStep;
 		Species species;
 		std::pair<int, int> location;
 };

@@ -2,7 +2,7 @@
 
 using namespace std;
 
-string Species::getInstruction(int step) {
+string Species::getInstruction(unsigned step) {
 	if (step < instructionSet.size()) {
 		return instructionSet[step];
 	}

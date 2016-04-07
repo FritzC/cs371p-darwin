@@ -12,7 +12,7 @@ Darwin::Darwin(int gridWidth, int gridHeight) {
 	width = gridWidth;
 	height = gridHeight;
 	grid = new Creature**[width];
-	for (int i = 0; i < width) {
+	for (int i = 0; i < width i++) {
 		grid[i] = new Creature*[height];
 		fill(grid[i], grid[i] + height, nullptr);
 	}

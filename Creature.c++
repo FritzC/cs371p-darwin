@@ -6,7 +6,7 @@ Creature::Creature(Species spec) {
 	species = spec;
 }
 
-void Creature::step(Darwin& grid) {
+void Creature::step(Darwin* grid) {
 	if (hadTurn) {
 		return;
 	}
@@ -24,9 +24,9 @@ void Creature::step(Darwin& grid) {
     		iss >> auxInfo;
     	}
 		if (instructionType.compare("hop") == 0) {
-			if(grid.getLocationType(getLocationFaced()) == Darwin::EMPTY) {
-				grid.insertCreature(this&, getLocationFaced());
-				grid.insertCreature(nullptr, location);
+			if(grid->getLocationType(getLocationFaced()) == Darwin::EMPTY) {
+				grid->insertCreature(this&, getLocationFaced());
+				grid->insertCreature(nullptr, location);
 				location = getLocationFaced();
 			}
 			break;
@@ -39,17 +39,17 @@ void Creature::step(Darwin& grid) {
 			face %= 4;
 			break;
 		} else if (instructionType.compare("infect") == 0) {
-			if (grid.getLocatioonType(getLocationFaced()) == OCCUPIED) {
-				grid.getCreatureAt(getLocationFaced()).infectWith(species);
+			if (grid->getLocatioonType(getLocationFaced()) == OCCUPIED) {
+				grid->getCreatureAt(getLocationFaced()).infectWith(species);
 			}
 			break;
 		} else if (instructionType.compare("if_empty") == 0) {
-			if(grid.getLocationType(getLocationFaced()) == Darwin::EMPTY) {
+			if(grid->getLocationType(getLocationFaced()) == Darwin::EMPTY) {
 				currentStep = auxInfo;
 				continue;
 			}
 		} else if (instructionType.compare("if_wall") == 0) {
-			if(grid.getLocationType(getLocationFaced()) == Darwin::INVALID) {
+			if(grid->getLocationType(getLocationFaced()) == Darwin::INVALID) {
 				currentStep = auxInfo;
 				continue;
 			}
@@ -59,7 +59,7 @@ void Creature::step(Darwin& grid) {
 				continue;
 			}
 		} else if (instructionType.compare("if_enemy") == 0) {
-			if(grid.getLocationType(getLocationFaced()) == Darwin::OCCUPIED) {
+			if(grid->getLocationType(getLocationFaced()) == Darwin::OCCUPIED) {
 				currentStep = auxInfo;
 				continue;
 			}

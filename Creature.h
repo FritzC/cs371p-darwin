@@ -8,15 +8,16 @@
 #include <string>
 #include <vector>
 #include "Species.h"
-#include "Darwin.h"
+
+class Darwin;
 
 class Creature {
 	public:
 		Creature(Species);
-		void step(Darwin&);
+		void step(Darwin*);
 		void infectWith(Species);
 		void printIdentifier();
-		void addToDarwin(Darwin&, std::pair<int, int>)
+		void addToDarwin(std::pair<int, int>)
 	private:
 		bool hadTurn;
 		int face;

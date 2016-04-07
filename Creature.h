@@ -19,3 +19,4 @@ class Creature {
 		int currentStep;
 		std::pair<int, int> location;
 }
+#endif

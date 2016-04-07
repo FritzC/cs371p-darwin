@@ -14,3 +14,4 @@ class Species {
 		char identifier;
 		std::vector<std::string> instructionSet;
 }
+#endif

@@ -25,3 +25,4 @@ class Darwin {
 		int turn;
 		Creature*** grid;
 }
+#endif

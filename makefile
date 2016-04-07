@@ -36,8 +36,8 @@ Darwin.log:
 Doxyfile:
 	doxygen -g
 
-RunDarwin: Darwin.h Darwin.c++ RunDarwin.c++
-	$(CXX) $(CXXFLAGS) $(GPROFFLAGS) Darwin.c++ RunDarwin.c++ -o RunDarwin
+RunDarwin: Darwin.h Darwin.c++ Creature.c++ Creature.h Species.c++ Species.h RunDarwin.c++
+	$(CXX) $(CXXFLAGS) $(GPROFFLAGS) Darwin.c++ Creature.c++ Species.c++ RunDarwin.c++ -o RunDarwin
 
 RunDarwin.tmp: RunDarwin
 	./RunDarwin > RunDarwin.tmp

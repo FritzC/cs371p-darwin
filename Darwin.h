@@ -3,6 +3,8 @@
 
 #include <stdlib.h>
 #include <utility>
+#include <string>
+#include <vector>
 #include "Creature.h"
 
 class Darwin {

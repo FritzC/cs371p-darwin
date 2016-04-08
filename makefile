@@ -32,7 +32,7 @@ html: Doxyfile Darwin.h Darwin.c++ RunDarwin.c++ TestDarwin.c++
 
 Darwin.log:
 	git log > Darwin.log
-
+#include "gtest/gtest_prod.h"
 Doxyfile:
 	doxygen -g
 
@@ -44,8 +44,8 @@ RunDarwin.tmp: RunDarwin
 	diff RunDarwin.tmp RunDarwin.out
 	$(GPROF) ./RunDarwin
 
-TestDarwin: Darwin.h Darwin.c++ TestDarwin.c++
-	$(CXX) $(CXXFLAGS) $(GCOVFLAGS) Darwin.c++ TestDarwin.c++ -o TestDarwin $(LDFLAGS)
+TestDarwin: Darwin.h Darwin.c++ Creature.c++ Creature.h Species.c++ Species.h TestDarwin.c++
+	$(CXX) $(CXXFLAGS) $(GCOVFLAGS) Darwin.c++ Creature.c++ Species.c++ TestDarwin.c++ -o TestDarwin $(LDFLAGS)
 
 TestDarwin.tmp: TestDarwin
 	$(VALGRIND) ./TestDarwin                                      >  TestDarwin.tmp 2>&1

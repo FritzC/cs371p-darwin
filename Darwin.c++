@@ -23,7 +23,7 @@ void Darwin::step() {
 		for (int x = 0; x < width; x++) {
 			if (grid[x][y] != nullptr) {
 				pair<int, int> locationFaced = grid[x][y]->getLocationFaced(pair<int, int>(x, y));
-				int action = grid[x][y]->step(getLocationType(locationFaced)));
+				int action = grid[x][y]->getAction(getLocationType(locationFaced)));
 				if (action == Creature::MOVE) {
 					grid[locationFaced.first][locationFaced.second] = grid[x][y];
 					grid[x][y] = nullptr;
@@ -61,11 +61,11 @@ Creature* Darwin::getCreatureAt(pair<int, int> coordinates) {
 	return grid[coordinates.first][coordinates.second];
 }
 
-void Darwin::insertCreature(Creature& creature, pair<int, int> coordinates) {
-	if (getLocationType(coordinates) != EMPTY) {
+void Darwin::insertCreature(Creature& creature, pair<int, int> location) {
+	if (getLocationType(location) != EMPTY) {
 		throw invalid_argument("Invalid coordinates specified");
 	}
-	grid[coodinates.first][coordinates.second] = &creature;
+	grid[location.first][location.second] = &creature;
 }
 
 void Darwin::print() {

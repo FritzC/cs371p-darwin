@@ -68,6 +68,10 @@ int Creature::getAction(int facedLocationType) {
 	return action;
 }
 
+void Creature::nextTurn() {
+	hadTurn = false;
+}
+
 void Creature::infect(Creature* infectee) {
 	infectee->species = species;
 	infectee->currentStep = 0;

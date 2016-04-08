@@ -36,6 +36,13 @@ void Darwin::step() {
 			}
 		}
 	}
+	for (int y = 0; y < height; y++) {
+		for (int x = 0; x < width; x++) {
+			if (grid[x][y] != nullptr) {
+				grix[x][y]->nextTurn();
+			}
+		}
+	}
 }
 
 /**
@@ -69,10 +76,10 @@ void Darwin::insertCreature(Creature& creature, pair<int, int> location) {
 }
 
 void Darwin::print() {
-	cout << "Turn: " << turn << "." << endl;
+	cout << "Turn = " << turn << "." << endl;
 	cout << "  ";
 	for (int x = 0; x < width; x++) {
-		cout << x;
+		cout << (x & 10);
 	}
 	cout << endl;
 	for (int y = 0; y < height; y++) {

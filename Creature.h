@@ -13,7 +13,6 @@ class Creature {
 	public:
 		Creature(Species type, int facing) : face(facing), species(type) {};
 		int getAction(int);
-		void nextTurn();
 		void infect(Creature*);
 		void printIdentifier();
 		void addToDarwin(std::pair<int, int>);

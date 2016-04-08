@@ -22,7 +22,7 @@ void Darwin::step() {
 	set<Creature*> hadTurn;
 	for (int y = 0; y < height; y++) {
 		for (int x = 0; x < width; x++) {
-			if (grid[x][y] != nullptr && hadTurn.find(grid[x][y]) != hadTurn.end()) {
+			if (grid[x][y] != nullptr && hadTurn.find(grid[x][y]) == hadTurn.end()) {
 				pair<int, int> locationFaced = grid[x][y]->getLocationFaced(pair<int, int>(x, y));
 				int action = grid[x][y]->getAction(getLocationType(locationFaced));
 				if (action == Creature::MOVE) {

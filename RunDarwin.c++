@@ -23,24 +23,36 @@ int main () {
     // ----
     // food
     // ----
+	
+	Species food('f');
 
     /*
      0: left
      1: go 0
     */
+	
+	food.addInstruction("left");
+	food.addInstruction("go 0");
 
     // ------
     // hopper
     // ------
+	
+	Species hopper('h");
 
     /*
      0: hop
      1: go 0
     */
+	
+	hopper.addInstruction("hop");
+	hopper.addInstruction("go 0");
 
     // -----
     // rover
     // -----
+	
+	Species rover('r');
 
     /*
      0: if_enemy 9
@@ -55,10 +67,24 @@ int main () {
      9: infect
     10: go 0
     */
+	
+	rover.addInstruction("if_enemy 9");
+	rover.addInstruction("if_empty 7");
+	rover.addInstruction("if_random 5");
+	rover.addInstruction("left");
+	rover.addInstruction("go 0");
+	rover.addInstruction("right");
+	rover.addInstruction("go 0");
+	rover.addInstruction("hop");
+	rover.addInstruction("go 0");
+	rover.addInstruction("infect");
+	rover.addInstruction("go 0");
 
     // ----
     // trap
     // ----
+	
+	Species trap('t');
 
     /*
      0: if_enemy 3
@@ -67,6 +93,12 @@ int main () {
      3: infect
      4: go 0
     */
+	
+	trap.addInstruction("if_enemy 3");
+	trap.addInstruction("left");
+	trap.addInstruction("go 0");
+	trap.addInstruction("infect");
+	trap.addInstruction("go 0");
 
     // ----------
     // darwin 8x8
@@ -84,6 +116,28 @@ int main () {
     Simulate 5 moves.
     Print every grid.
     */
+	
+	Darwin darwin8x8(8, 8);
+	
+	Creature f1(food, 2);
+	Creature h1(hopper, 1);
+	Creature h2(hopper, 2);
+	Creature h3(hopper, 3);
+	Creature h4(hopper, 0);
+	Creature f2(food, 1);
+	
+	darwin8x8.insertCreature(&f1, pair<int, int>(0, 0));
+	darwin8x8.insertCreature(&h1, pair<int, int>(3, 3));
+	darwin8x8.insertCreature(&h2, pair<int, int>(3, 4));
+	darwin8x8.insertCreature(&h3, pair<int, int>(4, 4));
+	darwin8x8.insertCreature(&h4, pair<int, int>(4, 3));
+	darwin8x8.insertCreature(&f2, pair<int, int>(7, 7));
+	
+	darwin8x8.print();
+	for (int i = 0; i < 5; i++) {
+		darwin8x8.step();
+		darwin8x8.print();
+	}
 
     // ----------
     // darwin 7x9

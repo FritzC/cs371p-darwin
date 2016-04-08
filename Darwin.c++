@@ -55,14 +55,14 @@ int Darwin::getLocationType(pair<int, int> coordinates) {
 }
 
 Creature* Darwin::getCreatureAt(pair<int, int> coordinates) {
-	if (getLocationType(coordinates) == INVALID) {
+	if (getLocationType(coordinates) == Creature::INVALID) {
 		throw invalid_argument("Invalid coordinates specified");
 	}
 	return grid[coordinates.first][coordinates.second];
 }
 
 void Darwin::insertCreature(Creature& creature, pair<int, int> location) {
-	if (getLocationType(location) != EMPTY) {
+	if (getLocationType(location) != Creature::EMPTY) {
 		throw invalid_argument("Invalid coordinates specified");
 	}
 	grid[location.first][location.second] = &creature;

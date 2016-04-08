@@ -27,6 +27,7 @@ class Creature {
 			EMPTY,
 			OCCUPIED
 		};
+		bool moved;
 	private:
 		int face;
 		unsigned currentStep;

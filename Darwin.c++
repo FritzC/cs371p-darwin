@@ -19,13 +19,15 @@ Darwin::Darwin(int gridWidth, int gridHeight) {
 }
 
 void Darwin::step() {
-	set<Creature*> hadTurn;
+	vector<Creature*> hadTurn;
 	for (int y = 0; y < height; y++) {
 		for (int x = 0; x < width; x++) {
-			if (grid[x][y] != nullptr && hadTurn.find(grid[x][y]) == hadTurn.end()) {
+			if (grid[x][y] != nullptr && !grid[x][y]->moved) {
+				grid[x][y]->moved = true;
 				pair<int, int> locationFaced = grid[x][y]->getLocationFaced(pair<int, int>(x, y));
 				int action = grid[x][y]->getAction(getLocationType(locationFaced));
 				if (action == Creature::MOVE) {
+					//cout << "ORIGINAL POS: " << x << ", " << y << " NEW POST: " << locationFaced.first << ", " << locationFaced.second << endl;
 					grid[locationFaced.first][locationFaced.second] = grid[x][y];
 					grid[x][y] = nullptr;
 				} else if (action == Creature::INFECT) {
@@ -34,10 +36,17 @@ void Darwin::step() {
 						grid[x][y]->infect(infectee);
 					}
 				}
-				hadTurn.insert(grid[x][y]);
 			}
 		}
 	}
+	for (int y = 0; y < height; y++) {
+		for (int x = 0; x < width; x++) {
+			if (grid[x][y] != nullptr) {
+				grid[x][y]->moved = false;
+			}
+		}
+	}
+	turn++;
 }
 
 /**
@@ -47,8 +56,8 @@ void Darwin::step() {
  * @return - LocationType of the location
  */
 int Darwin::getLocationType(pair<int, int> coordinates) {
-	if (coordinates.first < 0 && coordinates.first >= width
-			&& coordinates.second < 0 && coordinates.second >= height) {
+	if (coordinates.first < 0 || coordinates.first >= width
+			|| coordinates.second < 0 || coordinates.second >= height) {
 		return Creature::INVALID;
 	} else if (grid[coordinates.first][coordinates.second] == nullptr) {
 		return Creature::EMPTY;
@@ -74,7 +83,7 @@ void Darwin::print() {
 	cout << "Turn = " << turn << "." << endl;
 	cout << "  ";
 	for (int x = 0; x < width; x++) {
-		cout << (x & 10);
+		cout << (x % 10);
 	}
 	cout << endl;
 	for (int y = 0; y < height; y++) {

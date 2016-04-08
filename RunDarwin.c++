@@ -138,6 +138,7 @@ int main () {
 	for (int i = 0; i < 5; i++) {
 		darwin8x8.step();
 		darwin8x8.print();
+        cout << endl;
 	}
 
     // ----------

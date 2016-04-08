@@ -22,13 +22,13 @@ void Darwin::step() {
 	for (int y = 0; y < height; y++) {
 		for (int x = 0; x < width; x++) {
 			if (grid[x][y] != nullptr) {
-				pair<int, int> facedLocation = grid[x][y]->getFacedLocation(pair(x, y));
-				int action = grid[x][y]->step(this, getLocationType(facedLocation)));
+				pair<int, int> locationFaced = grid[x][y]->getLocationFaced(pair<int, int>(x, y));
+				int action = grid[x][y]->step(getLocationType(locationFaced)));
 				if (action == Creature::MOVE) {
-					grid[facedLocation.first][facedLocation.second] = grid[x][y];
+					grid[locationFaced.first][locationFaced.second] = grid[x][y];
 					grid[x][y] = nullptr;
 				} else if (action == Creature::INFECT) {
-					Creature* infectee = getCreatureAt(facedLocation);
+					Creature* infectee = getCreatureAt(locationFaced);
 					if (infectee != nullptr) {
 						grid[x][y]->infect(infectee);
 					}

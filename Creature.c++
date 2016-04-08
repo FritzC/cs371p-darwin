@@ -77,7 +77,7 @@ void Creature::printIdentifier() {
 	species.printIdentifier();
 }
 
-pair<int, int> getLocationFaced(pair<int, int> location) {
-	return pair<int, int>((face % 2 == 0) ? location.first + face - 1 : location.first,
-							(face % 2 == 1) ? location.second + face - 2 : location.second);
+pair<int, int> Creature::getLocationFaced(pair<int, int> currentLoc) {
+	return pair<int, int>((face % 2 == 0) ? currentLoc.first + face - 1 : currentLoc.first,
+							(face % 2 == 1) ? currentLoc.second + face - 2 : currentLoc.second);
 }

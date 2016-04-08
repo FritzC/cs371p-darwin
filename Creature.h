@@ -16,7 +16,7 @@ class Creature {
 		void infect(Creature*);
 		void printIdentifier();
 		void addToDarwin(std::pair<int, int>);
-		std::pair<int, int> getLocationFaced();
+		std::pair<int, int> getLocationFaced(std::pair<int, int>);
 		enum Action {
 			NONE,
 			MOVE,

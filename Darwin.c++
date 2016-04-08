@@ -39,7 +39,7 @@ void Darwin::step() {
 	for (int y = 0; y < height; y++) {
 		for (int x = 0; x < width; x++) {
 			if (grid[x][y] != nullptr) {
-				grix[x][y]->nextTurn();
+				grid[x][y]->nextTurn();
 			}
 		}
 	}

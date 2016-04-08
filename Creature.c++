@@ -21,7 +21,7 @@ int Creature::getAction(int facedLocationType) {
     		stream >> auxInfo;
     	}
 		if (instructionType.compare("hop") == 0) {
-			if(facedLocationType == Darwin::EMPTY) {
+			if(facedLocationType == EMPTY) {
 				action = MOVE;
 			}
 			break;
@@ -39,12 +39,12 @@ int Creature::getAction(int facedLocationType) {
 			}
 			break;
 		} else if (instructionType.compare("if_empty") == 0) {
-			if(facedLocationType == Darwin::EMPTY) {
+			if(facedLocationType == EMPTY) {
 				currentStep = auxInfo;
 				continue;
 			}
 		} else if (instructionType.compare("if_wall") == 0) {
-			if(facedLocationType == Darwin::INVALID) {
+			if(facedLocationType == INVALID) {
 				currentStep = auxInfo;
 				continue;
 			}
@@ -54,7 +54,7 @@ int Creature::getAction(int facedLocationType) {
 				continue;
 			}
 		} else if (instructionType.compare("if_enemy") == 0) {
-			if(facedLocationType == Darwin::OCCUPIED) {
+			if(facedLocationType == OCCUPIED) {
 				currentStep = auxInfo;
 				continue;
 			}

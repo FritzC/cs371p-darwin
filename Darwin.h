@@ -15,11 +15,6 @@ class Darwin {
 		void step();
 		void insertCreature(Creature&, std::pair<int, int>);
 		Creature* getCreatureAt(std::pair<int, int>);
-		enum LocationType {
-			INVALID,
-			EMPTY,
-			OCCUPIED
-		};
 		int getLocationType(std::pair<int, int>);
 	private:
 		int width;

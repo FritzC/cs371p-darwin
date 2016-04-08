@@ -22,6 +22,11 @@ class Creature {
 			MOVE,
 			INFECT
 		};
+		enum LocationType {
+			INVALID,
+			EMPTY,
+			OCCUPIED
+		};
 	private:
 		bool hadTurn;
 		int face;

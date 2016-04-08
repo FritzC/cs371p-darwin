@@ -129,12 +129,13 @@ int main () {
 	
 	darwin8x8.insertCreature(f1, pair<int, int>(0, 0));
 	darwin8x8.insertCreature(h1, pair<int, int>(3, 3));
-	darwin8x8.insertCreature(h2, pair<int, int>(3, 4));
+	darwin8x8.insertCreature(h2, pair<int, int>(4, 3));
 	darwin8x8.insertCreature(h3, pair<int, int>(4, 4));
-	darwin8x8.insertCreature(h4, pair<int, int>(4, 3));
+	darwin8x8.insertCreature(h4, pair<int, int>(3, 4));
 	darwin8x8.insertCreature(f2, pair<int, int>(7, 7));
 	
 	darwin8x8.print();
+    cout << endl;
 	for (int i = 0; i < 5; i++) {
 		darwin8x8.step();
 		darwin8x8.print();
@@ -156,6 +157,26 @@ int main () {
     Simulate 5 moves.
     Print every grid.
     */
+
+    Creature t1(trap, 3);
+    Creature h5(hopper, 2);
+    Creature r1(rover, 1);
+    Creature t2(trap, 0);
+    
+    Darwin darwin7x9(9, 7);
+
+    darwin7x9.insertCreature(t1, pair<int, int>(0, 0));
+    darwin7x9.insertCreature(h5, pair<int, int>(2, 3));
+    darwin7x9.insertCreature(r1, pair<int, int>(4, 5));
+    darwin7x9.insertCreature(t2, pair<int, int>(8, 6));
+
+    darwin7x9.print();
+    cout << endl;
+    for (int i = 0; i < 5; i++) {
+        darwin7x9.step();
+        darwin7x9.print();
+        cout << endl;
+    }
 
     // ------------
     // darwin 72x72
@@ -180,10 +201,58 @@ int main () {
     Print every 100th grid after that (i.e. 100, 200, 300...1000).
     */
 
+    Creature foods[10];
+    Creature hoppers[10];
+    Creature rovers[10];
+    Creature traps[10];
+    pair<int, int> locs[40];
+    int face[40];
+
+    Darwin darwin72x72(72, 72);
+
+    for (int i = 0; i < 40; i++) {
+        int locIdx = rand();
+        locs[i] = pair<int, int>(locIdx % 5184 % 72, locIdx % 5184 / 72);
+        face[i] = rand() % 4;
+    }
+    for (int i = 0; i < 10; i++) {
+        foods[i] = Creature(food, face[i]);
+        darwin72x72.insertCreature(foods[i], locs[i]);
+    }
+    for (int i = 0; i < 10; i++) {
+        hoppers[i] = Creature(hopper, face[i + 10]);
+        darwin72x72.insertCreature(hoppers[i], locs[i + 10]);
+    }
+    for (int i = 0; i < 10; i++) {
+        rovers[i] = Creature(rover, face[i + 20]);
+        darwin72x72.insertCreature(rovers[i], locs[i + 20]);
+    }
+    for (int i = 0; i < 10; i++) {
+        traps[i] = Creature(trap, face[i + 30]);
+        darwin72x72.insertCreature(traps[i], locs[i + 30]);
+    } 
+
+    darwin72x72.print();
+    cout << endl;
+    for (int i = 0; i < 9; i++) {
+        darwin72x72.step();
+        darwin72x72.print();
+        cout << endl;
+    }
+
+    for (int i = 9; i < 1000; i++) {
+        darwin72x72.step();
+        if ((i + 1) % 100 == 0) {
+            darwin72x72.print();
+            cout << endl;
+        }
+    }
+
     // ------------
     // darwin 72x72
     // with best
     // ------------
+
 
     cout << "*** Darwin 72x72 with Best ***" << endl;
     srand(0);
@@ -204,5 +273,66 @@ int main () {
     Print the first 10 grids          (i.e. 0, 1, 2...9).
     Print every 100th grid after that (i.e. 100, 200, 300...1000).
     */
+
+    Creature foods2[10];
+    Creature hoppers2[10];
+    Creature rovers2[10];
+    Creature traps2[10];
+    Creature best2[10];
+    pair<int, int> locs2[50];
+    int face2[50];
+
+    Darwin darwin72x72b(72, 72);
+
+    for (int i = 0; i < 50; i++) {
+        int locIdx = rand();
+        locs2[i] = pair<int, int>(locIdx % 5184 % 72, locIdx % 5184 / 72);
+        face2[i] = rand() % 4;
+    }
+    for (int i = 0; i < 10; i++) {
+        foods2[i] = Creature(food, face2[i]);
+        darwin72x72b.insertCreature(foods2[i], locs2[i]);
+    }
+    for (int i = 0; i < 10; i++) {
+        hoppers2[i] = Creature(hopper, face2[i + 10]);
+        darwin72x72b.insertCreature(hoppers2[i], locs2[i + 10]);
+    }
+    for (int i = 0; i < 10; i++) {
+        rovers2[i] = Creature(rover, face2[i + 20]);
+        darwin72x72b.insertCreature(rovers2[i], locs2[i + 20]);
+    }
+    for (int i = 0; i < 10; i++) {
+        traps2[i] = Creature(trap, face2[i + 30]);
+        darwin72x72b.insertCreature(traps2[i], locs2[i + 30]);
+    }
+    Species best('b');
+    best.addInstruction("if_enemy 4");
+    best.addInstruction("if_empty 6");
+    best.addInstruction("left");
+    best.addInstruction("go 0");
+    best.addInstruction("infect");
+    best.addInstruction("go 0");
+    best.addInstruction("hop");
+    best.addInstruction("go 0");
+
+    for (int i = 0; i < 10; i++) {
+        best2[i] = Creature(best, face2[i + 40]);
+        darwin72x72b.insertCreature(best2[i], locs2[i + 40]);
+    } 
+
+    darwin72x72b.print();
+    cout << endl;
+    for (int i = 0; i < 9; i++) {
+        darwin72x72b.step();
+        darwin72x72b.print();
+    }
+
+    for (int i = 9; i < 1000; i++) {
+        darwin72x72b.step();
+        if ((i + 1) % 100 == 0) {
+            cout << endl;
+            darwin72x72b.print();
+        }
+    }
 
     return 0;}

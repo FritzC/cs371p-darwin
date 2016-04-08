@@ -45,8 +45,8 @@ void Darwin::step() {
  * @return - LocationType of the location
  */
 int Darwin::getLocationType(pair<int, int> coordinates) {
-	if (coordinates.first >= 0 && coordinates.first < width
-			&& coordinates.second >= 0 && coordinates.second < height) {
+	if (coordinates.first < 0 && coordinates.first >= width
+			&& coordinates.second < 0 && coordinates.second >= height) {
 		return Creature::INVALID;
 	} else if (grid[coordinates.first][coordinates.second] == nullptr) {
 		return Creature::EMPTY;

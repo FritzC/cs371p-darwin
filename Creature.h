@@ -11,7 +11,7 @@
 
 class Creature {
 	public:
-		Creature(Species type, int facing) : species(type), face(facing) {};
+		Creature(Species type, int facing) : face(facing), species(type) {};
 		int getAction(int);
 		void infect(Creature*);
 		void printIdentifier();

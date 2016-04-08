@@ -48,5 +48,4 @@ class Creature {
 		FRIEND_TEST(DarwinFixture, infect2);
 		Species* species;
 };
-
 #endif

@@ -1,0 +1,141 @@
+==18420== Memcheck, a memory error detector
+==18420== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==18420== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==18420== Command: ./TestDarwin
+==18420== 
+Running main() from gtest_main.cc
+[==========] Running 53 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 53 tests from DarwinFixture
+[ RUN      ] DarwinFixture.initDarwin1
+[       OK ] DarwinFixture.initDarwin1 (23 ms)
+[ RUN      ] DarwinFixture.initDarwin2
+[       OK ] DarwinFixture.initDarwin2 (1 ms)
+[ RUN      ] DarwinFixture.initDarwin3
+[       OK ] DarwinFixture.initDarwin3 (1 ms)
+[ RUN      ] DarwinFixture.initDarwin4
+[       OK ] DarwinFixture.initDarwin4 (2 ms)
+[ RUN      ] DarwinFixture.begin1
+[       OK ] DarwinFixture.begin1 (2 ms)
+[ RUN      ] DarwinFixture.begin2
+[       OK ] DarwinFixture.begin2 (2 ms)
+[ RUN      ] DarwinFixture.begin3
+[       OK ] DarwinFixture.begin3 (2 ms)
+[ RUN      ] DarwinFixture.end1
+[       OK ] DarwinFixture.end1 (2 ms)
+[ RUN      ] DarwinFixture.end2
+[       OK ] DarwinFixture.end2 (2 ms)
+[ RUN      ] DarwinFixture.end3
+[       OK ] DarwinFixture.end3 (1 ms)
+[ RUN      ] DarwinFixture.end4
+[       OK ] DarwinFixture.end4 (2 ms)
+[ RUN      ] DarwinFixture.at1
+[       OK ] DarwinFixture.at1 (7 ms)
+[ RUN      ] DarwinFixture.at2
+[       OK ] DarwinFixture.at2 (3 ms)
+[ RUN      ] DarwinFixture.at3
+[       OK ] DarwinFixture.at3 (36 ms)
+[ RUN      ] DarwinFixture.at4
+[       OK ] DarwinFixture.at4 (2 ms)
+[ RUN      ] DarwinFixture.insertCreature1
+[       OK ] DarwinFixture.insertCreature1 (3 ms)
+[ RUN      ] DarwinFixture.insertCreature2
+[       OK ] DarwinFixture.insertCreature2 (3 ms)
+[ RUN      ] DarwinFixture.checkLocation1
+[       OK ] DarwinFixture.checkLocation1 (2 ms)
+[ RUN      ] DarwinFixture.checkLocation2
+[       OK ] DarwinFixture.checkLocation2 (2 ms)
+[ RUN      ] DarwinFixture.checkLocation3
+[       OK ] DarwinFixture.checkLocation3 (2 ms)
+[ RUN      ] DarwinFixture.checkLocation4
+[       OK ] DarwinFixture.checkLocation4 (2 ms)
+[ RUN      ] DarwinFixture.step1
+[       OK ] DarwinFixture.step1 (25 ms)
+[ RUN      ] DarwinFixture.step2
+[       OK ] DarwinFixture.step2 (9 ms)
+[ RUN      ] DarwinFixture.step3
+[       OK ] DarwinFixture.step3 (5 ms)
+[ RUN      ] DarwinFixture.creatureAt1
+[       OK ] DarwinFixture.creatureAt1 (2 ms)
+[ RUN      ] DarwinFixture.creatureAt2
+[       OK ] DarwinFixture.creatureAt2 (2 ms)
+[ RUN      ] DarwinFixture.creatureAt3
+[       OK ] DarwinFixture.creatureAt3 (2 ms)
+[ RUN      ] DarwinFixture.initCreature1
+[       OK ] DarwinFixture.initCreature1 (1 ms)
+[ RUN      ] DarwinFixture.initCreature2
+[       OK ] DarwinFixture.initCreature2 (2 ms)
+[ RUN      ] DarwinFixture.initCreature3
+[       OK ] DarwinFixture.initCreature3 (1 ms)
+[ RUN      ] DarwinFixture.getAction1
+[       OK ] DarwinFixture.getAction1 (3 ms)
+[ RUN      ] DarwinFixture.getAction2
+[       OK ] DarwinFixture.getAction2 (3 ms)
+[ RUN      ] DarwinFixture.getAction3
+[       OK ] DarwinFixture.getAction3 (3 ms)
+[ RUN      ] DarwinFixture.getAction4
+[       OK ] DarwinFixture.getAction4 (3 ms)
+[ RUN      ] DarwinFixture.getAction5
+[       OK ] DarwinFixture.getAction5 (2 ms)
+[ RUN      ] DarwinFixture.getAction6
+[       OK ] DarwinFixture.getAction6 (4 ms)
+[ RUN      ] DarwinFixture.getAction7
+[       OK ] DarwinFixture.getAction7 (2 ms)
+[ RUN      ] DarwinFixture.infect1
+[       OK ] DarwinFixture.infect1 (3 ms)
+[ RUN      ] DarwinFixture.infect2
+[       OK ] DarwinFixture.infect2 (2 ms)
+[ RUN      ] DarwinFixture.checkEnemy1
+[       OK ] DarwinFixture.checkEnemy1 (3 ms)
+[ RUN      ] DarwinFixture.checkEnemy2
+[       OK ] DarwinFixture.checkEnemy2 (2 ms)
+[ RUN      ] DarwinFixture.resetTurn1
+[       OK ] DarwinFixture.resetTurn1 (2 ms)
+[ RUN      ] DarwinFixture.resetTurn2
+[       OK ] DarwinFixture.resetTurn2 (3 ms)
+[ RUN      ] DarwinFixture.locationFaced1
+[       OK ] DarwinFixture.locationFaced1 (2 ms)
+[ RUN      ] DarwinFixture.locationFaced2
+[       OK ] DarwinFixture.locationFaced2 (2 ms)
+[ RUN      ] DarwinFixture.locationFaced3
+[       OK ] DarwinFixture.locationFaced3 (2 ms)
+[ RUN      ] DarwinFixture.locationFaced4
+[       OK ] DarwinFixture.locationFaced4 (3 ms)
+[ RUN      ] DarwinFixture.initSpecies1
+[       OK ] DarwinFixture.initSpecies1 (1 ms)
+[ RUN      ] DarwinFixture.initSpecies2
+[       OK ] DarwinFixture.initSpecies2 (1 ms)
+[ RUN      ] DarwinFixture.addInstruction1
+[       OK ] DarwinFixture.addInstruction1 (3 ms)
+[ RUN      ] DarwinFixture.addInstruction2
+[       OK ] DarwinFixture.addInstruction2 (3 ms)
+[ RUN      ] DarwinFixture.addInstruction3
+[       OK ] DarwinFixture.addInstruction3 (2 ms)
+[ RUN      ] DarwinFixture.addInstruction4
+[       OK ] DarwinFixture.addInstruction4 (3 ms)
+[----------] 53 tests from DarwinFixture (217 ms total)
+
+[----------] Global test environment tear-down
+[==========] 53 tests from 1 test case ran. (246 ms total)
+[  PASSED  ] 53 tests.
+==18420== 
+==18420== HEAP SUMMARY:
+==18420==     in use at exit: 0 bytes in 0 blocks
+==18420==   total heap usage: 1,130 allocs, 1,130 frees, 174,376 bytes allocated
+==18420== 
+==18420== All heap blocks were freed -- no leaks are possible
+==18420== 
+==18420== For counts of detected and suppressed errors, rerun with: -v
+==18420== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+File 'Darwin.c++'
+Lines executed:74.63% of 67
+Branches executed:78.05% of 82
+Taken at least once:54.88% of 82
+Calls executed:56.32% of 87
+Creating 'Darwin.c++.gcov'
+File 'TestDarwin.c++'
+Lines executed:99.07% of 323
+Branches executed:100.00% of 594
+Taken at least once:50.00% of 594
+Calls executed:79.06% of 1084
+Creating 'TestDarwin.c++.gcov'

@@ -127,12 +127,12 @@ int main () {
 	Creature h4(hopper, 0);
 	Creature f2(food, 1);
 	
-	darwin8x8.insertCreature(&f1, pair<int, int>(0, 0));
-	darwin8x8.insertCreature(&h1, pair<int, int>(3, 3));
-	darwin8x8.insertCreature(&h2, pair<int, int>(3, 4));
-	darwin8x8.insertCreature(&h3, pair<int, int>(4, 4));
-	darwin8x8.insertCreature(&h4, pair<int, int>(4, 3));
-	darwin8x8.insertCreature(&f2, pair<int, int>(7, 7));
+	darwin8x8.insertCreature(f1, pair<int, int>(0, 0));
+	darwin8x8.insertCreature(h1, pair<int, int>(3, 3));
+	darwin8x8.insertCreature(h2, pair<int, int>(3, 4));
+	darwin8x8.insertCreature(h3, pair<int, int>(4, 4));
+	darwin8x8.insertCreature(h4, pair<int, int>(4, 3));
+	darwin8x8.insertCreature(f2, pair<int, int>(7, 7));
 	
 	darwin8x8.print();
 	for (int i = 0; i < 5; i++) {

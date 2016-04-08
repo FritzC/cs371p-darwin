@@ -14,6 +14,6 @@ void Species::addInstruction(string instruction) {
 }
 
 void Species::printIdentifier() {
-	printf(identifier);
+    printf("%c\n", identifier);
 	//cout << identifier;
 }

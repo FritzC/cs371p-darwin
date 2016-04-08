@@ -14,5 +14,5 @@ class Species {
 	private:
 		char identifier;
 		std::vector<std::string> instructionSet;
-}
+};
 #endif

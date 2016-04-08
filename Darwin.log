@@ -1,0 +1,234 @@
+commit 736c9efb76082a303fb605f18cefdacda56cc740
+Author: Frederick Copes <fritzc@cs.utexas.edu>
+Date:   Fri Apr 8 02:33:55 2016 -0500
+
+    Doxy
+
+commit 4dce1400bb270e5cfc29f6bbcc5a23ae91b2b27f
+Author: Frederick Copes <fritzc@cs.utexas.edu>
+Date:   Fri Apr 8 02:33:17 2016 -0500
+
+    Doxy
+
+commit 8cdd72151acb86895682b4f4a57455adb9bd72de
+Author: Frederick Copes <fritzc@cs.utexas.edu>
+Date:   Fri Apr 8 02:24:41 2016 -0500
+
+    .
+
+commit 89910d1d11d14c87ef9e02b08d07bc19d52cd414
+Author: Frederick Copes <fritzc@cs.utexas.edu>
+Date:   Fri Apr 8 02:23:15 2016 -0500
+
+    I give up trying to fix this compile error
+
+commit b01b4b3f83fc4cae0f4e007e5234437dd8219a33
+Author: Frederick Copes <fritzc@cs.utexas.edu>
+Date:   Thu Apr 7 21:03:53 2016 -0500
+
+    FIRST TEST WORKING
+
+commit 9623b2166a7504f5df6be7344262c008e8196889
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:47:59 2016 -0500
+
+    Test #8
+
+commit 3f7d3b9398c3ba0f040828511b231fc6fa8b6da4
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:47:09 2016 -0500
+
+    Test #8
+
+commit e0c8984e08711a07e5d7f21543e3e8860a7c96c7
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:45:50 2016 -0500
+
+    Test #7
+
+commit e9528a57b2a610fb559f98df10998a07eb8e9ff7
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:41:22 2016 -0500
+
+    Test #6
+
+commit b642f918a4e4e3d8cad1a9b61cd28898b4b0e015
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:40:02 2016 -0500
+
+    Test #6
+
+commit ba595d57228582b6e495a9cd15d642905ade3a61
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:38:57 2016 -0500
+
+    Test #6
+
+commit 301827b9fdfd9dab33e69f5aa468a573e96bb175
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:38:30 2016 -0500
+
+    Test #5
+
+commit 8f0ac0bc72bade3bc4a6ed113adbac06609af5ff
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:34:03 2016 -0500
+
+    Test 4
+
+commit b420c41ea81e02ed057382d442a898056722eea8
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:33:17 2016 -0500
+
+    Test 3
+
+commit 7b1cb2dada2f43b6889d458588fe38902d0ff0cc
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:31:27 2016 -0500
+
+    Test 3
+
+commit 49f4706504b2a225521f62e56b0be21967410d1f
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:30:34 2016 -0500
+
+    Test 2
+
+commit 8493ff07a5f7511b93f864e1aa9f9ff26c0b6210
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:27:45 2016 -0500
+
+    First test run
+
+commit 30c8b8a662c21cedae1f83a3f5b9c64fc98f14ae
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:16:19 2016 -0500
+
+    Continuation 9 (real final)
+
+commit 5aff9861b7a721499a569010fd1f28bcb4a1ff55
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:15:38 2016 -0500
+
+    Continuation 8 (and final???)
+
+commit 4ce9fb23321689d583f03c3ffcb808d0e366e76d
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:13:40 2016 -0500
+
+    Continuation 7
+
+commit 6c4c7c8e38d460ad582d013c0320dc0f5b27cc00
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:10:32 2016 -0500
+
+    Continuation 6
+
+commit c740c3c7bfa5ea904065b08dbda266ec1405bd46
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:05:31 2016 -0500
+
+    Continuation 5
+
+commit b29df2e2a2b6daa7f96468180d8698f6b58cdc23
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:02:40 2016 -0500
+
+    Continuation 3
+
+commit 916e3316e35d7af550087a27ceea2093f890c11b
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 19:01:08 2016 -0500
+
+    Continuation 2
+
+commit 3c051d886e3540ed7fbd31e9d9837654478fb842
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 18:58:43 2016 -0500
+
+    Continuation
+
+commit cb348229ab1f50e363f9e2261cd10842b798a3e9
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 18:56:17 2016 -0500
+
+    Restructured to remove circular dependency
+
+commit e18abe0c47c018b1753906cb633af4907384712c
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 18:33:39 2016 -0500
+
+    Last fix i can make before dealing with circular dependency
+
+commit b19a8f6ae30833818c9fcff7fe8cfb79a5049819
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 18:31:06 2016 -0500
+
+    More fixes
+
+commit e9ac330977e482679ff3611efb78eb1fd8de43c0
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 18:25:30 2016 -0500
+
+    This is confusing
+
+commit 18ab28f83457328f75c6cfe504510a26ba1e8401
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 18:19:43 2016 -0500
+
+    This is stupid
+
+commit 2c010f3a6f487b4cbb893c66abf240434020be3f
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 18:17:29 2016 -0500
+
+    Another attempt
+
+commit 6bccac8f90f3d4b9d788b80c00f6bbf82316e198
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 18:05:41 2016 -0500
+
+    more import stuff
+
+commit c9a6ebb74c04e68d9af0c786bc9e64df4afc0dcf
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 18:02:03 2016 -0500
+
+    Added more imports
+
+commit 4d47234c9aa2906ec476b78e0cad2a8cecf83633
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 17:53:31 2016 -0500
+
+    Another attempt to fix
+
+commit c2d63f9c227c8c181fc1e209e1d9165440b0715f
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 17:48:11 2016 -0500
+
+    Forgot to add
+    #endif
+
+commit 04677bcb69b12334d745628d148c56c971833cca
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 17:45:46 2016 -0500
+
+    First compilation fix push
+
+commit 6959abe49b37c4c14b913d14f52798f85b948209
+Author: teamchaos <teamchaos>
+Date:   Thu Apr 7 17:37:53 2016 -0500
+
+    Tenative completed code
+
+commit a081cbc8e627cd55851f9ea85db6ba82f44244e8
+Author: Frederick Copes <fritzc@cs.utexas.edu>
+Date:   Wed Apr 6 13:46:12 2016 -0500
+
+    Created base structures for Darwin and Creature as well as basic implementation of methods
+
+commit 4893cf136f972325751dad4dc85370896e2aa36d
+Author: Frederick Copes <fritzc@cs.utexas.edu>
+Date:   Wed Apr 6 12:40:30 2016 -0500
+
+    Set up project

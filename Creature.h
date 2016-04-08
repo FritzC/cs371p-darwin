@@ -29,7 +29,6 @@ class Creature {
 			OCCUPIED
 		};
 	private:
-		bool hadTurn;
 		int face;
 		unsigned currentStep;
 		Species species;

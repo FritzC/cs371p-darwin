@@ -3,9 +3,6 @@
 using namespace std;
 
 int Creature::getAction(int facedLocationType) {
-	if (hadTurn) {
-		return NONE;
-	}
 	int action = NONE;
 	while (true) {
 		string instruction = species.getInstruction(currentStep);
@@ -64,7 +61,6 @@ int Creature::getAction(int facedLocationType) {
 		}
 		currentStep++;
 	}
-	hadTurn = true;
 	return action;
 }
 

@@ -27,6 +27,6 @@ class Creature {
 		int face;
 		unsigned currentStep;
 		Species species;
-};
+}
 
 #endif

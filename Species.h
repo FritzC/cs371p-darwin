@@ -1,9 +1,9 @@
 #ifndef SPECIES_H
 #define SPECIES_H
 
+#include <stdio.h>
 #include <string>
 #include <vector>
-#include <iostring>
 
 class Species {
 	public:
@@ -14,5 +14,5 @@ class Species {
 	private:
 		char identifier;
 		std::vector<std::string> instructionSet;
-};
+}
 #endif

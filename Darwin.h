@@ -26,6 +26,6 @@ class Darwin {
 		int height;
 		int turn;
 		Creature*** grid;
-};
+}
 
 #endif

@@ -11,8 +11,8 @@ using namespace std;
 Darwin::Darwin(int gridWidth, int gridHeight) {
 	width = gridWidth;
 	height = gridHeight;
-	grid = new Creature*[width * height];
-	fill(grid, grid + width * height, nullptr);
+	grid = vector<Creature*>(height * width);
+	fill(grid.begin(), grid.end(), nullptr);
 	turn = 0;
 }
 
@@ -119,7 +119,7 @@ void Darwin::print() {
  * @return - Iterator
  */
 Creature** Darwin::begin() {
-	return grid;
+	return grid.data();
 }
 
 /**
@@ -129,7 +129,7 @@ Creature** Darwin::begin() {
  * @return - End of the Iterator
  */
 Creature** Darwin::end() {
-	return grid + width * height;
+	return grid.data() + grid.size();
 }
 
 /**

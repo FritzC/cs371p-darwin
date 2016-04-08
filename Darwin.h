@@ -39,7 +39,7 @@ class Darwin {
 		FRIEND_TEST(DarwinFixture, at2);
 		FRIEND_TEST(DarwinFixture, insertCreature1);
 		FRIEND_TEST(DarwinFixture, insertCreature2);
-		Creature** grid;
+		std::vector<Creature*> grid;
 };
 
 #endif

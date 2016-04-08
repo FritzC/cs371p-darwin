@@ -1,9 +1,9 @@
 #ifndef SPECIES_H
 #define SPECIES_H
 
-#include <stdlib.h>
 #include <string>
 #include <vector>
+#include <iostring>
 
 class Species {
 	public:

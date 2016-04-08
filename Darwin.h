@@ -1,12 +1,12 @@
 #ifndef DARWIN_H
 #define DARWIN_H
 
+#include "Creature.h"
 #include <stdlib.h>
 #include <utility>
 #include <string>
 #include <vector>
 #include <stdexcept>
-#include "Creature.h"
 
 class Darwin {
 	public:
